@@ -49,7 +49,7 @@ public class FirstPersonController : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag("Enemy")) {
-			this.gameObject.SetActive(false);
+			GetComponent<LoadScene>().LoadByIndex(2);
 		}
 	}
 }

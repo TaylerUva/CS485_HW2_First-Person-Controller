@@ -6,17 +6,22 @@ public class TrackPlayer : MonoBehaviour {
 
 	public Transform target;
 	public float speed;
+	private float targetY;
 
-	private Vector3 offset;
-
-	// Start is called before the first frame update
-	void Start() {
-		offset = transform.position - target.position;
+	private void Start() {
+		targetY = target.position.y;
 	}
-
 	// Update is called once per frame
 	void Update() {
-		transform.LookAt(target, Vector3.up);
-		transform.position += transform.forward * speed * Time.deltaTime;
+		Vector3 targetPos = new Vector3(target.position.x, targetY, target.position.z);
+		transform.LookAt(targetPos, Vector3.up);
+		Vector3 trackedPos = transform.forward * speed * Time.deltaTime;
+		transform.position += new Vector3(trackedPos.x, 0, trackedPos.z);
+	}
+
+	private void OnTriggerEnter(Collider other) {
+		if (other.gameObject.CompareTag("Hammer")) {
+			Debug.Log("Hit");
+		}
 	}
 }
