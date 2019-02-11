@@ -46,10 +46,4 @@ public class FirstPersonController : MonoBehaviour {
 			isGrounded = true;
 		}
 	}
-
-	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag("Enemy")) {
-			GetComponent<LoadScene>().LoadByIndex(2);
-		}
-	}
 }

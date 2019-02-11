@@ -20,8 +20,8 @@ public class TrackPlayer : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag("Hammer")) {
-			Debug.Log("Hit");
+		if (other.gameObject.CompareTag("Hammer") && Input.GetButton("Fire1")) {
+			Destroy(gameObject);
 		}
 	}
 }
