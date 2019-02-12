@@ -6,9 +6,16 @@ Project Link: [https://github.com/TaylerUva/CS485_HW2_First-Person-Controller](h
 
 ## Game Description
 
+You are trapped in a labyrinth with your goal to get out before you are eaten by the monsters within.
+
 ---
 
 ## Game Instructions
+
+- Use WASD or the arrow keys to move.
+- Use the mouse to look.
+- Avoid the monsters.
+- Find the warp gate out of the labyrinth.
 
 ---
 
@@ -24,8 +31,10 @@ Some first person controller and chasing code used from instructor provided Samp
 
 ## Furture improvements to implement
 
-- Add time to score
-- Add bonus for getting all pickups
+- More maps
+- Power ups (i.e. hide walls temporarily)
+- Traps
+- More enemies
 
 ---
 

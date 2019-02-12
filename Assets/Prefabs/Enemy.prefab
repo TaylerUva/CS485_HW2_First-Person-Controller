@@ -2867,8 +2867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 7
-  trackDistance: 20
+  speed: 2
+  trackDistance: 10
 --- !u!54 &7661033569270214011
 Rigidbody:
   m_ObjectHideFlags: 0
